@@ -14,21 +14,34 @@ public class TestClass {
         //Pencereyi tam ekran yapmak için
         driver.manage().window().maximize();
 
-        //Linkedin sayfasını açmak için
-        driver.get("https://linkedin.com");
+        //Test sayfasını açmak için
+        driver.get("https://demoqa.com/text-box");
 
-        //Mail kısmına mailimizi girmek için
-        WebElement userName = driver.findElement(By.id("session_key"));
-        userName.click();
-        userName.sendKeys("mertkocak.2811@gmail.com");
+        //Full Name kısmına adımızı girmek için
+        WebElement FullName = driver.findElement(By.id("userName"));
+        FullName.click();
+        FullName.sendKeys("Mert Koçak");
 
-        //Password kısmına Password girmek için
-        WebElement password = driver.findElement(By.id("session_password"));
+        //E-mail kısmına e-mail girmek için
+        WebElement password = driver.findElement(By.id("userEmail"));
         password.click();
-        password.sendKeys("***Linkedin Password***");
+        password.sendKeys("mertkocak.2811@gmail.com");
 
-        //"Oturum aç" butonuna tıklamak için
-        WebElement loginButton = driver.findElement(By.className("sign-in-form__submit-button"));
+        //Anlık Adres kısmına adresimizi girmek için
+        WebElement SecondName = driver.findElement(By.id("currentAddress"));
+        SecondName.click();
+        SecondName.sendKeys("İstanbul");
+
+        //Daimi Adres kısmına adresimizi girmek için
+        WebElement bName = driver.findElement(By.id("permanentAddress"));
+        bName.click();
+        bName.sendKeys("Sivas");
+
+        //"Submit" butonuna tıklamak için
+        WebElement loginButton = driver.findElement(By.id("submit"));
         loginButton.click();
+
+
     }
 }
+
