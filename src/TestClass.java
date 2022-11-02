@@ -23,19 +23,19 @@ public class TestClass {
         FullName.sendKeys("Mert Koçak");
 
         //E-mail kısmına e-mail girmek için
-        WebElement password = driver.findElement(By.id("userEmail"));
-        password.click();
-        password.sendKeys("mertkocak.2811@gmail.com");
+        WebElement email = driver.findElement(By.id("userEmail"));
+        email.click();
+        email.sendKeys("mertkocak.2811@gmail.com");
 
         //Anlık Adres kısmına adresimizi girmek için
-        WebElement SecondName = driver.findElement(By.id("currentAddress"));
-        SecondName.click();
-        SecondName.sendKeys("İstanbul");
+        WebElement address1 = driver.findElement(By.id("currentAddress"));
+        address1.click();
+        address1.sendKeys("İstanbul");
 
         //Daimi Adres kısmına adresimizi girmek için
-        WebElement bName = driver.findElement(By.id("permanentAddress"));
-        bName.click();
-        bName.sendKeys("Sivas");
+        WebElement address2 = driver.findElement(By.id("permanentAddress"));
+        address2.click();
+        address2.sendKeys("Sivas");
 
         //"Submit" butonuna tıklamak için
         WebElement loginButton = driver.findElement(By.id("submit"));
@@ -44,4 +44,3 @@ public class TestClass {
 
     }
 }
-
